@@ -1,0 +1,24 @@
+body {
+  @apply text-gray-600;
+
+  /* 主要中文字體：蘋方-繁、黑體-繁、微軟無襯線體 */
+  font-family: 'PingFang TC', 'Heiti TC', 'Microsoft Sans Serif'
+  ,'Apple LiGothic Medium','Verdana','Tahoma','Trebuchet MS','Helvetica Neue'
+  ,Arial,sans-serif;
+}
+
+button {
+  @apply rounded py-2 px-4 transition-all;
+}
+
+/* 清除 font icon 不明多出的高度 */
+i {
+  @apply flex;
+}
+
+/* html, body, #app {
+  @apply w-full h-full;
+} */
+
+
+/* 以下會放此專案的自訂樣式，或是用來覆蓋公版樣式 */

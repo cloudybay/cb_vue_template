@@ -1,0 +1,8 @@
+import { req } from "@/axios/cb"
+
+export const EmptyRepo = {
+  feature: {
+    get: (params) => req("get", '', params),
+    post: (data) => req("post", '', data)
+  }
+}

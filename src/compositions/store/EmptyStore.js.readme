@@ -1,0 +1,14 @@
+import { reactive, readonly, provide } from 'vue'
+
+export const useEmptyStore = () => {
+  const state = reactive({
+  })
+
+  const store = {
+    state: readonly(state)
+  }
+
+  provide('EmptyStore', store)
+
+  return store
+}

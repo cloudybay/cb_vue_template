@@ -1,0 +1,19 @@
+include:
+  - project: 'cloudybay/cb_dood'
+    ref: ci-test-v2
+    file: '/templates/.gitlab-ci-frontend.yml'
+
+variables:
+  BACKEND_PROJECT: cloudybay%2F{{ project_name }}_backend
+
+build:
+  extends: .build
+
+scanner:
+  extends: .scanner
+
+staging:
+  extends: .staging
+
+production:
+  extends: .production
