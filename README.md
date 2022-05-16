@@ -1,3 +1,8 @@
+## How to use the template
+```
+$ npx degit cloudybay/cb_vue_template
+```
+
 ## Requirements
 - node 14.17.4
 - npm 6.14.14
