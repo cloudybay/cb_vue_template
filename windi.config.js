@@ -5,7 +5,6 @@ module.exports = {
   extract: {
     include: ['./index.html', './src/**/*.{vue,js}'],
   },
-  safelist: ['animate-spin', 'animate-pulse'],
 	// presets: [
   //   require('./src/libs/cb-theme/tw_preset.js')
   // ],
@@ -15,8 +14,6 @@ module.exports = {
       // 擴充 windi 預設的顏色
       colors: {
         gray: colors.trueGray,  // windi 預設的 gray 是 coolGray，這邊用 trueGray 取代掉
-      },
-      zIndex: {
       },
     },
   },
