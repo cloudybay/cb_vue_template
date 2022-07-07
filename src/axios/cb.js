@@ -31,9 +31,9 @@ function response_wrapper(response) {
 
 // request 攔截器
 cb_axios.interceptors.request.use((config) => {
-    return config;
+    return config
   }, (error) => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
 )
 
@@ -48,30 +48,30 @@ cb_axios.interceptors.response.use((response) => {
     }
 
     if (!window.navigator.onLine) {
-      alert("網路出了點問題，請重新連線後重整網頁");
-      return;
+      alert("網路出了點問題，請重新連線後重整網頁")
+      return
     }
 
-    return Promise.reject(response_wrapper(error.response));
+    return Promise.reject(response_wrapper(error.response))
   }
 )
 
 // 封裝 http 方法
 export const req = (method, url, data=null) => {
-  method = method.toLowerCase();
+  method = method.toLowerCase()
   switch (method) {
     case "post":
-      return cb_axios.post(url, data);
+      return cb_axios.post(url, data)
     case "get":
-      return cb_axios.get(url, { params: data });
+      return cb_axios.get(url, { params: data })
     case "delete":
-      return cb_axios.delete(url, { data: data });
+      return cb_axios.delete(url, { data: data })
     case "put":
-      return cb_axios.put(url, data);
+      return cb_axios.put(url, data)
     case "patch":
-      return cb_axios.patch(url, data);
+      return cb_axios.patch(url, data)
     default:
-      console.log(`未知的 http method: ${method}`);
-      return false;
+      console.log(`未知的 http method: ${method}`)
+      return false
   }
 }
