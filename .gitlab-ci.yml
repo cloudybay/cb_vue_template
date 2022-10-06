@@ -1,6 +1,6 @@
 include:
   - project: 'cloudybay/cb_dood'
-    ref: ci-test-v2
+    ref: master
     file: '/templates/.gitlab-ci-frontend.yml'
 
 variables:
